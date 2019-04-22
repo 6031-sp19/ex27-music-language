@@ -47,6 +47,14 @@ public class Concat implements Music {
     }
 
     /**
+     * Transpose the pieces in this concatenation.
+     */
+    @Override
+    public Music transpose(int semitonesUp) {
+        return new Concat(first.transpose(semitonesUp), second.transpose(semitonesUp));
+    }
+
+    /**
      * Play this concatenation.
      */
     @Override

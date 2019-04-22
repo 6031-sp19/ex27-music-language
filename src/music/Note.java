@@ -51,6 +51,14 @@ public class Note implements Music {
     }
 
     /**
+     * Transpose this note.
+     */
+    @Override
+    public Music transpose(int semitonesUp) {
+        return new Note(duration, pitch.transpose(semitonesUp), instrument);
+    }
+
+    /**
      * Play this note.
      */
     @Override

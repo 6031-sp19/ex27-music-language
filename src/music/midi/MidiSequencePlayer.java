@@ -150,6 +150,7 @@ public class MidiSequencePlayer implements SequencePlayer {
      * @param callback function to call
      * @param atBeat beat at which to call the callback (while playing, must be now or in the future)
      */
+    @Override
     public void addEvent(Consumer<Double> callback, double atBeat) {
         int callbackNumber = saveCallback(callback);
         try {

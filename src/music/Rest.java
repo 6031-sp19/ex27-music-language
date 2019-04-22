@@ -29,6 +29,14 @@ public class Rest implements Music {
     }
 
     /**
+     * Transpose this rest.
+     */
+    @Override
+    public Music transpose(int semitonesUp) {
+        return this;
+    }
+
+    /**
      * Play this rest.
      */
     @Override
